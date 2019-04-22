@@ -6,11 +6,11 @@ const port = process.env.port || 3000;
 
 dotenv.config();
 
-mongoose.connect(`mongodb+srv://apiJS:${process.env.MONGO_PASSWORD}@minicursojs-zr4eo.mongodb.net/test?retryWrites=true`, {useNewUrlParser: true})
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/test?retryWrites=true`, {useNewUrlParser: true})
     .then(() => {
-        console.log("Conected to Mongo DB");
+        console.log("Conected to MongoDB");
     }, err => {
-        console.log(err);
+        console.error("Failed to connect to MongoDB", err);
         
     });
 
