@@ -14,7 +14,7 @@ module.exports.save = function(req, res) {
     let article = {
         title: req.body.title,
         content: req.body.content,
-        createdAt: req.body.createdAt   
+        createdAt: Date.now()
     };
 
     article = new Article(article);
