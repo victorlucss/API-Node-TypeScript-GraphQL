@@ -13,4 +13,9 @@ Estudos voltados à construção de uma API de notícias em Node.js, tendo como 
 - [ ] Construir Schema e Query para Notícia em GraphQL
 - [ ] Integrar CRUD de Notícia com GraphQL
 
+Lista de afazeres opcionais:
+
+- [ ] Incluir suporte a arquivos TS
+- [ ] Incluir testes
+
 Mais tópicos podem surgir ao decorrer do projeto.
