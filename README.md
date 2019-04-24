@@ -15,7 +15,8 @@ Estudos voltados à construção de uma API de notícias em Node.js, tendo como 
 
 Lista de afazeres opcionais:
 
-- [ ] Incluir suporte a arquivos TS
+- [x] Incluir suporte a arquivos TypeScript
+- [x] Transformar arquivos do projeto para TypeScript
 - [ ] Incluir testes
 
 Mais tópicos podem surgir ao decorrer do projeto.
