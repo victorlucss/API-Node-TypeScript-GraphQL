@@ -1,15 +1,17 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const morgan = require('morgan');
-const ap = express();
-const [initial, article] = require('../routes/index');
+import express from 'express';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
 
-ap.use(bodyParser.json());
-ap.use(bodyParser.urlencoded({ extended: false }));
-ap.use(morgan('combined'))
+import {article,initial} from '../routes';
 
-ap.use('/', initial);
-ap.use('/article', article);
+const config = express();
 
-export default ap;
+config.use(bodyParser.json());
+config.use(bodyParser.urlencoded({ extended: false }));
+config.use(morgan('combined'))
+
+config.use('/', initial);
+config.use('/article', article);
+
+export default config;
 
