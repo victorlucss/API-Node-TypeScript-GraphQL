@@ -15,18 +15,17 @@ const connectToMongo = () => {
 };
 
 export function connect(interval: number, attemps: number){
-    setInterval(() => {
+    let retryable = setInterval(() => {
         if(attemps === 0) {
             console.error("[MONGO] Error in MongoDB connection!");
-            clearInterval();
-            interval
+            clearInterval(retryable);
         }else if(!mongoIsConected){
             console.log("[MONGO] Retrying connection with MongoDB");
             connectToMongo();
         }
 
         attemps--;
-    }, interval);
+    }, interval);    
 
     connectToMongo();
 
