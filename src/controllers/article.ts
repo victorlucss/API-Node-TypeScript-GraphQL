@@ -22,5 +22,16 @@ export function save(req: any, res: any) {
             message: "Documento salvo."
         })
     });
+};
 
-}
+export function del(req: any, res: any){
+    let id = req.params.id;
+
+    let article = Article.findById(id, (err) => {
+        if(err) res.status(404).send({message: `Unable to find article with id = ${id}. Error: ${err}`});
+        
+        res.status(200).send({
+            message: "Article successfully deleted!"
+        });
+    });
+};
