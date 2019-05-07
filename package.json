@@ -19,7 +19,9 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.5.2",
+    "reflect-metadata": "^0.1.13",
     "ts-node": "^8.1.0",
+    "type-graphql": "^0.17.3",
     "typescript": "^3.4.4"
   },
   "devDependencies": {
