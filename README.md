@@ -1,27 +1,24 @@
-# **Estudos - API Node.js**
+# **Studies - API with Node.js, Mongo (with Mongoose) and GraphQL**
 
-Estudos voltados à construção de uma API de notícias em Node.js, tendo como armazenamento Mongo com consultas usando GraphQL. Abaixo uma lista de afazeres:
+Studies focused on building a news API on Node.js, taking Mongo storage with queries using GraphQL. Below is a list of chores:
 
-- [x] Iniciar projeto
-- [x] Integrar projeto com Mongo usando Mongoose
-- [x] Proteger variáveis especiais com Dotenv
-- [x] Construir rota para Notícia
-- [x] Criar CRUD de notícia
-- [x] Criar Schemas do Mongo
-- [x] Integrar CRUD de notícia com Mongo
-- [ ] Integrar projeto com GraphQL
-- [ ] Construir Schema e Query para Notícia em GraphQL
-- [ ] Integrar CRUD de Notícia com GraphQL
+- [x] Start project
+- [x] Integrate project with Mongo using Mongoose
+- [x] Protect special variables using DotEnv
+- [x] Construct route for Article
+- [x] Create CRUD for Article
+- [x] Create Schemas of Mongo
+- [x] Integrate CRUD of Aritcles with Mongo
+- [ ] Integrate projects with GraphQL
+- [ ] Build Schema and Query for Article in GraphQL
+- [ ] Integrate CRUD of Article with GraphQL
+- [x] Include support to TypeScript
+- [x] Turn all .js files into .ts files
+- [ ] Include tests
 
-Lista de afazeres opcionais:
+More topics may arise during the course of the project.
 
-- [x] Incluir suporte a arquivos TypeScript
-- [x] Transformar arquivos do projeto para TypeScript
-- [ ] Incluir testes
-
-Mais tópicos podem surgir ao decorrer do projeto.
-
-## **Referências**
+## **References**
 
 [How (and why) you should use Typescript with Node and Express.](https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d)  
 [Node.js e TypeScript: O como e com testes](https://medium.com/@oieduardorabelo/node-js-e-typescript-o-como-e-com-testes-7affce2c02a8)
