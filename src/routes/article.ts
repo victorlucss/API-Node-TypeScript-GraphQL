@@ -1,5 +1,5 @@
 import express from 'express';
-import {findAll, save, del} from '../controllers/article';
+import {findAll, save, del, update} from '../controllers/article';
 
 const router = express.Router();
 
@@ -13,6 +13,10 @@ router.post('/', (req, res) => {
 
 router.delete('/', (req:any , res: any) => {
     del(req, res);
+})
+
+router.put('/:id', (req: any, res: any) => {
+    update(req, res);
 })
 
 export default router;
