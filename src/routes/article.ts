@@ -9,14 +9,14 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     save(req, res);
-})
+});
 
 router.delete('/', (req:any , res: any) => {
     del(req, res);
-})
+});
 
 router.put('/:id', (req: any, res: any) => {
     update(req, res);
-})
+});
 
 export default router;
