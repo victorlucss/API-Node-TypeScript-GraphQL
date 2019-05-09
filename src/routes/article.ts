@@ -7,7 +7,7 @@ router.get('/', findAll);
 
 router.post('/', save);
 
-router.delete('/', del);
+router.delete('/:id', del);
 
 router.put('/:id', update);
 
