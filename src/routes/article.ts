@@ -3,20 +3,12 @@ import {findAll, save, del, update} from '../controllers/article';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    findAll(req,res);
-});
+router.get('/', findAll);
 
-router.post('/', (req, res) => {
-    save(req, res);
-});
+router.post('/', save);
 
-router.delete('/', (req:any , res: any) => {
-    del(req, res);
-});
+router.delete('/', del);
 
-router.put('/:id', (req: any, res: any) => {
-    update(req, res);
-});
+router.put('/:id', update);
 
 export default router;
