@@ -1,10 +1,5 @@
-import mongoose, {Schema, Document} from 'mongoose';
-
-export interface IArticle extends Document {
-    title: string,
-    content: string,
-    createdAt: number
-}
+import mongoose, {Schema} from 'mongoose';
+import ArticleInterface from './interface/ArticleInterface';
 
 const articleSchema: Schema = new Schema({
     title: {type: String, required: true},
@@ -14,4 +9,4 @@ const articleSchema: Schema = new Schema({
     versionKey: false
 });
 
-export default mongoose.model<IArticle>('Article', articleSchema);
+export default mongoose.model<ArticleInterface>('Article', articleSchema);
