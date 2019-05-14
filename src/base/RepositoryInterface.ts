@@ -1,7 +1,7 @@
 
 export default interface DAOInterface {
 
-    findById(id: number): Promise<object>;
+    findById(id: number | string): Promise<object>;
     find(): Promise<object[]>;
     save(obj: object): Promise<void>;
     edit(id: number, obj: object): Promise<void>;
