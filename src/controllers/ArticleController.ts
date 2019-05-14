@@ -11,18 +11,27 @@ export default class ArticleController {
         this.service = new ArticleService();
     }
 
-    getArticles(req: Request, res: Response) {
+    findArticleById = async (req: Request, res: Response) => {
         try {
-            res.send(this.service.getArticles());
+            let id: string = req.params.id;
+            res.send(await this.service.findArticleById(id));
         } catch (ex){
             res.status(ex.code).send(ex.message);
         }
     }
 
-    saveArticle(req: Request, res: Response) {
+    getArticles = async (req: Request, res: Response) => {
+        try {
+            res.send(await this.service.getArticles());
+        } catch (ex){
+            res.status(ex.code).send(ex.message);
+        }
+    }
+
+    saveArticle = async (req: Request, res: Response) => {
         try {
             let article: ArticleInterface = req.body;
-            res.send(this.service.saveArticle(article));
+            res.send(await this.service.saveArticle(article));
         } catch (ex){
             res.status(ex.code).send(ex.message);
         }
