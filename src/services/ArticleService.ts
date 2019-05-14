@@ -11,6 +11,14 @@ export default class ArticleService {
         this.repository = new ArticleRepository();
     };
 
+    public async findArticleById(id: string): Promise<Response> {
+        let article: ArticleInterface = await this.repository.findById(id);
+
+        if(!article) throw new ErrorException("No article found.", 404);
+
+        return new Response(article);
+    }
+
     public async getArticles(): Promise<Response> {
         
         let articles: ArticleInterface[] = await this.repository.find();
