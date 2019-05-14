@@ -7,9 +7,10 @@ export default class ArticleRepository implements RepositoryInterface {
     
     constructor(){};
 
-    public async findById(id: number): Promise<ArticleInterface> {
+    public async findById(id: string): Promise<ArticleInterface> {
+        
         let article: ArticleInterface = await Article.findById(id, (err) => {
-            if(err) throw new ErrorException(err.message, 404);
+            if(err) throw Error();
         });       
 
         return article;
