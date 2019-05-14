@@ -1,14 +1,14 @@
 import dotenv from 'dotenv';
-import config from './config/config';
-import * as mongo from './config/mongo';
-
-const port = process.env.port || 3000;
+import ServerConfig from './config/ServerConfig';
+import MongoConfig from './config/MongoConfig';
+import ArticleRoute from './routes/ArticleRoute';
 
 dotenv.config();
 
-mongo.connect(3000, 5);
+let mongo: MongoConfig = new MongoConfig(process.env.MONGO_USER, process.env.MONGO_PASSWORD, process.env.MONGO_HOST);
+let server: ServerConfig = new ServerConfig();
 
-config.listen(port, () => {
-    console.log(`Server listeninig on port ${port}`)
-})
-
+mongo.connect();
+server.initServer([
+    new ArticleRoute()
+]);
