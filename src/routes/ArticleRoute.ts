@@ -12,6 +12,8 @@ export default class ArticleRoute implements RouteInterface {
 
     public applyRoute(app: Application): void {
 
+        app.get('/article/:id', this.controller.findArticleById);
+
         app.get('/article', this.controller.getArticles);
 
         app.post('/article', this.controller.saveArticle);
