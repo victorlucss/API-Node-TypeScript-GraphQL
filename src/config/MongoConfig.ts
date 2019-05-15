@@ -2,27 +2,22 @@ import mongoose from 'mongoose';
 
 export default class MongoConfig {
 
-    private user: string | undefined;
-    private password: string | undefined;
-    private host: string | undefined;
+    private user: string;
+    private password: string;
+    private host: string;
 
-    constructor(user: string | undefined, password: string | undefined, host: string | undefined){
+    constructor(user: string, password: string, host: string){
         this.user = user;
         this.password = password;
         this.host = host;
     }
 
     public async connect(): Promise<void> {
+        console.log("[MONGO] Conecting to MongoDB...");
 
-        if(this.user != undefined && this.password != undefined && this.host != undefined){
-            console.log("[MONGO] Conecting to MongoDB...");
-    
-            mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/test?retryWrites=true`, { useNewUrlParser: true })
-                .then(() => console.log("[MONGO] Conected to MongoDB"))
-                .catch(err => console.error(err));
-        }else console.error("[MONGO] User, password or host is undefined!");
-
-        
+        mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/test?retryWrites=true`, { useNewUrlParser: true })
+            .then(() => console.log("[MONGO] Conected to MongoDB"))
+            .catch(err => console.error(err));        
     }
 
 };
