@@ -9,8 +9,9 @@ export default class ArticleRepository implements RepositoryInterface {
 
     public async findById(id: string): Promise<ArticleInterface> {
         
-        let article: ArticleInterface = await Article.findById(id, (err) => {
-            if(err) throw Error();
+        //When the article isn't found I just need to throw the error to the above layer (in this case, the Service)
+        let article: ArticleInterface = await Article.findOne({"_id": id}).catch(err => {
+            throw Error();
         });       
 
         return article;
