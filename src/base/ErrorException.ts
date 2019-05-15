@@ -1,9 +1,10 @@
-export default class ErrorException extends Error {
+export default class ErrorException {
 
+    private message: string | object;
     private code: number;
 
-    constructor(message: string, code: number){
-        super(message);
+    constructor(message: string | object, code: number){
+        this.message = message;
         this.code = code;
     }
 }
