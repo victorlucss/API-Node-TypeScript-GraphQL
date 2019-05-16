@@ -11,12 +11,12 @@ export default class ArticleService {
         this.repository = new ArticleRepository();
     };
 
-    public async findArticleById(id: string): Promise<Response> {
+    public async findArticleById(id: string): Promise<ArticleInterface> {
         let article: ArticleInterface = await this.repository.findById(id);
 
-        if(!article) throw new ErrorException("No article found.", 404);
+        if(!article) throw new ErrorException(new Response("No article found."), 404);
 
-        return new Response(article);
+        return article;
     }
 
     public async getArticles(): Promise<Response> {
