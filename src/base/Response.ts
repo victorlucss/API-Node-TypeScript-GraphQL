@@ -1,8 +1,8 @@
 
 export default class Response {
-    private content: any;
+    private data: any;
 
-    constructor(content: any) {
-        this.content = content;
+    constructor(data: any) {
+        this.data = data;
     }
 };
