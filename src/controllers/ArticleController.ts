@@ -17,7 +17,7 @@ export default class ArticleController {
             res.send(await this.service.findArticleById(id));
         } catch (ex){
             if(ex.code) res.status(ex.code).send(ex.message)
-            res.send(ex.message);
+            res.status(500).send(ex.message);
         }
     }
 
@@ -26,7 +26,7 @@ export default class ArticleController {
             res.send(await this.service.getArticles());
         } catch (ex){
             if(ex.code) res.status(ex.code).send(ex.message)
-            res.send(ex.message);
+            res.status(500).send(ex.message);
         }
     }
 
@@ -36,7 +36,7 @@ export default class ArticleController {
             res.send(await this.service.saveArticle(article));
         } catch (ex){
             if(ex.code) res.status(ex.code).send(ex.message)
-            res.send(ex.message);
+            res.status(500).send(ex.message);
         }
     }
 };
