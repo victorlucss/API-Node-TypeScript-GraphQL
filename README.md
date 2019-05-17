@@ -24,3 +24,4 @@ More topics may arise during the course of the project.
 [Node.js e TypeScript: O como e com testes](https://medium.com/@oieduardorabelo/node-js-e-typescript-o-como-e-com-testes-7affce2c02a8)  
 [GraphQL TypeScript](https://pusher.com/tutorials/graphql-typescript)  
 [A CRUD app with Apollo, GraphQL, NodeJs, Express, MongoDB, Angular (v5)](https://blog.cloudboost.io/a-crud-app-with-apollo-graphql-nodejs-express-mongodb-angular5-2874111cd6a5)
+[RESTful API Design Tips from Experience](https://medium.com/studioarmix/learn-restful-api-design-ideals-c5ec915a430f)
